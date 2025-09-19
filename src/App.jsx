@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
+import Login from "./views/login/components/Login";
 import UpdateBootcamp from "./views/actualizar/componets/Actualizar"; // importa el componente
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
 
         {/* Ruta para actualizar un bootcamp */}
+        <Route path="/login" element={<Login />} />
         <Route path="/bootcamps/update/:id" element={<UpdateBootcamp/>} />
       </Routes>
     </Router>
