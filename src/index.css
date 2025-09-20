@@ -66,3 +66,32 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.breadcrumb {
+          background-color: transparent;
+          padding: 0;
+        }
+        
+        .bootcamp-info {
+          background-color: #f8f9fa;
+        }
+        
+        .card {
+          border-radius: 12px;
+          overflow: hidden;
+        }
+        
+        .btn {
+          border-radius: 8px;
+          padding: 0.75rem 1.5rem;
+          font-weight: 600;
+          transition: all 0.3s;
+        }
+        
+        .btn:hover:not(:disabled) {
+          transform: translateY(-2px);
+        }
+        
+        .alert {
+          border-radius: 8px;
+          border: none;
+        }
