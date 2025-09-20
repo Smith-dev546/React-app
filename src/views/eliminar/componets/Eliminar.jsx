@@ -1,3 +1,5 @@
+
+
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router";
 
@@ -14,7 +16,7 @@ export default function EliminarBootcamp() {
     const fetchBootcampData = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch("http://localhost:8000/api/auth/bootcamps/all");
+        const response = await fetch("http://localhost:3000/api/auth/bootcamps/all");
         
         if (!response.ok) {
           throw new Error("Error al cargar los bootcamps");
@@ -50,7 +52,7 @@ export default function EliminarBootcamp() {
     setError("");
 
     try {
-      const response = await fetch(`http://localhost:8000/api/auth/bootcamps/delete/${id}`, {
+      const response = await fetch(`http://localhost:3000/api/auth/bootcamps/delete/${id}`, {
         method: "DELETE",
       });
 
@@ -244,37 +246,6 @@ export default function EliminarBootcamp() {
         </div>
       </div>
 
-      <style jsx>{`
-        .breadcrumb {
-          background-color: transparent;
-          padding: 0;
-        }
-        
-        .bootcamp-info {
-          background-color: #f8f9fa;
-        }
-        
-        .card {
-          border-radius: 12px;
-          overflow: hidden;
-        }
-        
-        .btn {
-          border-radius: 8px;
-          padding: 0.75rem 1.5rem;
-          font-weight: 600;
-          transition: all 0.3s;
-        }
-        
-        .btn:hover:not(:disabled) {
-          transform: translateY(-2px);
-        }
-        
-        .alert {
-          border-radius: 8px;
-          border: none;
-        }
-      `}</style>
     </div>
   );
 }

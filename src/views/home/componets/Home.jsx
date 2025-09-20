@@ -29,7 +29,7 @@ export default function Dashboard() {
     try {
       setIsLoading(true);
       setError("");
-      const response = await fetch("http://localhost:8000/api/auth/bootcamps/all");
+      const response = await fetch("http://localhost:3000/api/auth/bootcamps/all");
       
       if (!response.ok) {
         throw new Error("Error al cargar los bootcamps");
