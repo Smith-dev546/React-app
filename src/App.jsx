@@ -4,11 +4,13 @@ import Dashboard from "./views/home/componets/Home";
 import UpdateBootcamp from "./views/crear/components/Crear";
 import EliminarBootcamp from "./views/eliminar/componets/Eliminar";
 import CreateBootcamp from "./views/actualizar/componets/Actualizar";
+import Register from "./views/session/components/Register"
 
 function App() {
     return (
     <Router>
       <Routes>
+         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/bootcamps/update/:id" element={<UpdateBootcamp />} />
